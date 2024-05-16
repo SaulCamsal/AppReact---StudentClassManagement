@@ -1,5 +1,6 @@
 import { Header } from "../components/Header";
-import { Login } from "../components/main/Login";
+import Login from "../sections/Login";
+
 
 export function RootLayout(){
     return(
