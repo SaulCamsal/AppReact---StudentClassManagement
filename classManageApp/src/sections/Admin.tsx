@@ -12,7 +12,7 @@ export function Admin(){
         <>
             <h1>ADMIN VIEW!</h1>
             <p>Bienvenido: {user}</p>
-            <button onClick={() => logout}> Salir </button>
+            <button onClick={() => logout()}> Salir </button>
         </>
     )
 }

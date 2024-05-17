@@ -7,10 +7,10 @@ interface ILoginStore{
     logout: () => void;
 }
 
-export const useLoginStore = create((set)=>({
+export const useLoginStore = create<ILoginStore> ((set)=>({
     user:null,
     isLoggedIn:false,
-    login: (user:string) => {set({user, isLoggedin:true})},
+    login: (user:string) => {set({user, isLoggedIn:true})},
     logout: () => {
         window.localStorage.removeItem("user_token")
         set(

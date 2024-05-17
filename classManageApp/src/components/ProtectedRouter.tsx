@@ -5,8 +5,8 @@ import { useLoginStore } from "../store/useLoginStore";
 export function ProtectedRouter(){
     // validador de sesión
     const {isLoggedIn} = useLoginStore()
-
-    if (isLoggedIn){
+    console.log(isLoggedIn)
+    if (!isLoggedIn){
         return <Navigate to="/" />
     }
 
