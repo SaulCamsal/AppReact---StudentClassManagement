@@ -32,10 +32,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Login/>} />
+        <Route path="/students" element={<Students/>}/>
         <Route element={<ProtectedRouter/>}>
           <Route path="/admin" element={<Admin/>}/>
           <Route path="/classes" element={<Classes/>}/>
-          <Route path="/students" element={<Students/>}/>
           <Route path="/suscriptions" element={<Suscription/>}/>
         </Route>
         <Route path="/studentview" element={<StudentView/>}/>
