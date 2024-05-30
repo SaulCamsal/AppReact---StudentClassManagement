@@ -17,7 +17,7 @@ import { useLoginStore } from '../store/useLoginStore';
 const defaultTheme = createTheme();
 
 export default function Login() {
-  //Redireccionar con valitade si es una cuenta con acceso
+  //Redireccionar con validate si es una cuenta con acceso
   const navigate =useNavigate()
   const {login} = useLoginStore()
 

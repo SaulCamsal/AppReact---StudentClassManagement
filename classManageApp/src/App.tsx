@@ -10,6 +10,8 @@ import { Students } from "./sections/students/Students"
 import { ProtectedRouter } from "./components/ProtectedRouter"
 import { useEffect } from "react"
 import { useLoginStore } from "./store/useLoginStore"
+import { ThemeProvider } from "@mui/material"
+import { AddStudent } from "./components/students/AddStudent"
 
   //Validar con el servicio
   //Routes
@@ -30,10 +32,12 @@ function App() {
 
   return (
     <>
+
       <Routes>
         <Route path="/" element={<Login/>} />
-        <Route path="/students" element={<Students/>}/>
         <Route element={<ProtectedRouter/>}>
+          <Route path="/students" element={<Students/>}/>
+          <Route path="/addstudent" element={<AddStudent/>}/>
           <Route path="/admin" element={<Admin/>}/>
           <Route path="/classes" element={<Classes/>}/>
           <Route path="/suscriptions" element={<Suscription/>}/>
