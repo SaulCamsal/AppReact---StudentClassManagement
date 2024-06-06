@@ -1,6 +1,6 @@
 import { Button, CircularProgress, Input, Stack } from "@mui/joy";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { postStudents } from "../../services/student-service";
 
 export function AddStudent() {
@@ -25,7 +25,7 @@ export function AddStudent() {
         addStudent(formJson)
         setLoading(false)
 
-        navigate('/')
+        navigate('/students')
 
     }
 
@@ -35,7 +35,9 @@ export function AddStudent() {
                 <Stack spacing={1}>
                     <Input placeholder="Nombre" name="nombre" />
                     <Input placeholder="Apellido" name="apellido" />
-                    <Button type="submit">Guardar</Button>
+                    <Link to={"/students"}>
+                    </Link>
+                        <Button type="submit">Guardar</Button>
                 </Stack>
             </form>
             {loading &&

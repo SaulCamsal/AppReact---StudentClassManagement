@@ -1,6 +1,6 @@
 import { IStudent } from "../components/students/IStudent"
 
-const url = "https://backend-subs-control.onrender.com/api/alumno"
+export const url = "https://backend-subs-control.onrender.com/api/alumno"
 
 export async function getStudents(){
     const response = await fetch(url)
